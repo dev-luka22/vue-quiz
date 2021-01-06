@@ -182,7 +182,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: block;
   background-color: rgba(48, 36, 211, 0.253);
 }
@@ -191,7 +191,7 @@ export default {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 170px);
+  transform: translate(-50%, 165px);
   padding: 10px 30px;
   background-color: rgb(48, 36, 211);
   border: none;
@@ -254,5 +254,11 @@ export default {
   font-size: 16px;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 500px) {
+  .button-next {
+    transform: translate(-50%, 210px);
+  }
 }
 </style>
