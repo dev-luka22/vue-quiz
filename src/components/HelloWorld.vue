@@ -7,6 +7,7 @@
         :first="quizData[currentQuestion].a"
         :second="quizData[currentQuestion].b"
         :third="quizData[currentQuestion].c"
+        :fourth="quizData[currentQuestion].d"
         @actionFoo="actionFoo"
         ref="Child"
       />
@@ -52,24 +53,85 @@ export default {
       legal: false,
       quizData: [
         {
-          question: "First?",
-          a: "false",
-          b: "false",
-          c: "true",
+          question: "Which of following is NOT JavaScript Data type?",
+          a: "Number",
+          b: "Boolean",
+          c: "Undefined",
+          d: "Float",
+          correct: "d",
+        },
+        {
+          question: "Who invented JavaScript?",
+          a: "Dennis Ritchie",
+          b: "James Gosling",
+          c: "Brendan Eich",
+          d: "Bjarne Stroustrup",
           correct: "c",
         },
         {
-          question: "Second?",
-          a: "false",
-          b: "true",
-          c: "false",
+          question: "What is Vue?",
+          a: "JavaScript framework",
+          b: "CSS preprocessor",
+          c: "Code editor",
+          d: "Game engine",
+          correct: "a",
+        },
+        {
+          question:
+            "Which symbol is used for multi-line comment in JavaScript?",
+          a: "#",
+          b: "<!-- -->",
+          c: "/* */",
+          d: "===",
+          correct: "c",
+        },
+        {
+          question: "Which of these is NOT JavaScript variable?",
+          a: "var",
+          b: "let",
+          c: "const",
+          d: "new",
+          correct: "d",
+        },
+        {
+          question: "What can we achieve with pop() method?",
+          a: "Add new item to an array",
+          b: "Remove the last element of an array",
+          c: "Reverse the order of the elements in an array",
+          d: "Fill all the array elements with a static value",
           correct: "b",
         },
         {
-          question: "Third?",
-          a: "true",
-          b: "false",
-          c: "false",
+          question: "Which method do we use to add a new item in array?",
+          a: "splice()",
+          b: "fill()",
+          c: "push()",
+          d: "some()",
+          correct: "c",
+        },
+        {
+          question: "{state: true, range: 500} is:",
+          a: "Array",
+          b: "Object",
+          c: "Hash Table",
+          d: "Linked List",
+          correct: "b",
+        },
+        {
+          question: "What is API?",
+          a: "Arranged programming input",
+          b: "Assigned processor image",
+          c: "Application programming interface",
+          d: "Add previous input",
+          correct: "c",
+        },
+
+        {
+          question: "What is DOM?",
+          a: "Document object model",
+          b: "Documentation of methods",
+          c: "Distribution of modals",
+          d: "Delivery optimized model",
           correct: "a",
         },
       ],
@@ -129,7 +191,7 @@ export default {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 140px);
+  transform: translate(-50%, 170px);
   padding: 10px 30px;
   background-color: rgb(48, 36, 211);
   border: none;
@@ -147,7 +209,7 @@ export default {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -220px);
+  transform: translate(-50%, -260px);
 }
 
 .question-count-title {

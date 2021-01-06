@@ -1,27 +1,34 @@
 <template>
   <div class="container">
     <div class="holder">
-      <p class="holder-question">Question: {{ question }}</p>
+      <p class="holder-question">{{ question }}</p>
       <p
         @click="$emit('actionFoo', 'a')"
         v-on:click="selectItem"
         class="changeColorArr"
       >
-        a: {{ first }}
+        {{ first }}
       </p>
       <p
         @click="$emit('actionFoo', 'b')"
         class="changeColorArr"
         v-on:click="selectItem"
       >
-        b: {{ second }}
+        {{ second }}
       </p>
       <p
         @click="$emit('actionFoo', 'c')"
         class="changeColorArr"
         v-on:click="selectItem"
       >
-        c: {{ third }}
+        {{ third }}
+      </p>
+      <p
+        @click="$emit('actionFoo', 'd')"
+        class="changeColorArr"
+        v-on:click="selectItem"
+      >
+        {{ fourth }}
       </p>
     </div>
   </div>
@@ -35,6 +42,7 @@ export default {
     first: null,
     second: null,
     third: null,
+    fourth: null,
   },
   methods: {
     selectItem(el) {
