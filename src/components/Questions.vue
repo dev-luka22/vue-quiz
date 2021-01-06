@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="holder">
-      <p>Question: {{ question }}</p>
+      <p class="holder-question">Question: {{ question }}</p>
       <p
         @click="$emit('actionFoo', 'a')"
         v-on:click="selectItem"
@@ -40,10 +40,12 @@ export default {
     selectItem(el) {
       const changeColorArr = document.querySelectorAll(".changeColorArr");
       changeColorArr.forEach((e) => {
-        e.style.backgroundColor = "cornsilk";
+        e.style.backgroundColor = "#ffffff";
+        e.style.color = "#000000";
       });
       if (el) {
-        el.currentTarget.style.backgroundColor = "green";
+        el.currentTarget.style.backgroundColor = "#01be01";
+        el.currentTarget.style.color = "#ffffff";
       }
     },
   },
@@ -55,18 +57,46 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
 }
 
 .holder {
   width: 500px;
+  position: relative;
+  z-index: 3;
 }
 
 p {
   padding: 10px;
-  background-color: cornsilk;
-  margin-bottom: 10px;
+  background-color: #ffffff;
+  margin-bottom: 15px;
   cursor: pointer;
+  text-align: center;
+  width: 500px;
+  border-radius: 10px;
+}
+
+.holder-question {
+  color: #f02121;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 500px) {
+  .holder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  p {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  p {
+    width: 310px;
+  }
 }
 </style>
