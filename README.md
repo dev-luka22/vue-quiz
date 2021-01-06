@@ -6,7 +6,7 @@ It can be improved in numerous ways.
 
 I just wanted to make something simple, and see how it all fits together.
 
-App is responsive and you can check it out on [this link](https://dev-luka22-vue-quiz.netlify.app/)
+App is responsive and you can check it out on [this link](https://dev-luka22-vue-quiz.netlify.app/).
 
 ## Project setup
 
