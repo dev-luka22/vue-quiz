@@ -53,7 +53,7 @@ export default {
       legal: false,
       quizData: [
         {
-          question: "Which of following is NOT JavaScript Data type?",
+          question: "Which of the following is NOT JavaScript Data type?",
           a: "Number",
           b: "Boolean",
           c: "Undefined",

@@ -1,6 +1,6 @@
 # Simple Vue Quiz App
 
-This is a simple Quiz App which I made while learning **Vue.js** framework.
+This is a simple Quiz App, which I made while I was learning **Vue.js** framework.
 
 It can be improved in numerous ways.
 
